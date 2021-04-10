@@ -15,7 +15,7 @@ func Conectar() (*sql.DB, error) {
 		return nil, erro
 	}
 
-	if error := db.Ping(); erro != nil {
+	if erro := db.Ping(); erro != nil {
 		db.Close()
 		return nil, erro
 	}
